@@ -17,10 +17,14 @@ set tabstop=8
 set shiftround
 set expandtab
 
+set autoindent
+set copyindent
+
 "Tabs
 map <silent><A-Right> :tabnext<CR>
 map <silent><A-Left> :tabprevious<CR>
 map <silent><C-t> :tabnew<CR>
+
 
 "number
 set number
@@ -33,4 +37,12 @@ imap ww <Esc>:wq<CR>
 
 "Directory
 map <silent><F4> :op .<CR>
-set wildignore+=.git/*,.svn/*,.hg/*,_darcs/*,build/*,dist/*,*.o,*.so,*.pyc
+"set wildignore+=.git/*,.svn/*,.hg/*,_darcs/*,build/*,dist/*,*.o,*.so,*.polorScheme * highlight BadWhitespace ctermbg=red guibg=red 
+" highlight wrong spaces and tabs
+autocmd ColorScheme * highlight BadWhitespace ctermbg=red guibg=red
+colorscheme default " hack to force the highlight group to be created
+match BadWhitespace /^\t\+/
+match BadWhitespace /^\s\+/
+match BadWhitespace /\t\+$/
+match BadWhitespace /\s\+$/
+
