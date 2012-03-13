@@ -1,5 +1,6 @@
 set nocompatible
 syntax on
+filetype plugin on
 
 set cursorline
 set showmode
@@ -25,8 +26,11 @@ map <silent><A-Right> :tabnext<CR>
 map <silent><A-Left> :tabprevious<CR>
 map <silent><C-t> :tabnew<CR>
 
+""Colors
 
-"number
+map <silent><F9> :set background=dark<CR>
+
+""Number
 set number
 map <silent><F2> :set invnumber<CR>
 
