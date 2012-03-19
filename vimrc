@@ -1,5 +1,8 @@
 set nocompatible
 syntax on
+let $VIMHOME = $HOME."/.vim"
+filetype on
+
 
 set cursorline
 set showmode
@@ -25,12 +28,20 @@ map <silent><A-Right> :tabnext<CR>
 map <silent><A-Left> :tabprevious<CR>
 map <silent><C-t> :tabnew<CR>
 
+""Colors
+map <silent><F9> :set background=dark<CR>
 
-"number
+""Number
 set number
 map <silent><F2> :set invnumber<CR>
 
-"Saving 
+""Paste options
+
+map <silent><F5> :set paste<CR>
+map <silent><F6> :set nopaste<CR>
+
+
+"Saving
 map <silent><F3> :wq!<CR>
 imap qq <Esc>:q!<CR>
 imap ww <Esc>:wq<CR>
