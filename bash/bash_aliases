@@ -1,0 +1,12 @@
+
+alias ll='ls -la'
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+alias sup='svn up'
+alias sadd='svn add'
+alias sci='svn ci'
+alias sstatus='svn status'
+

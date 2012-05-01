@@ -1,6 +1,6 @@
 README
 
-Evim is my personal vim's configuration. It is a basic conf for sysadmin. 
+Evim is my personal vim's configuration. It is a basic conf for sysadmin.
 
 Tabs:
     Ctrl+t -> Create new tab
