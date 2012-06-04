@@ -1,3 +1,4 @@
+alias s='sudo'
 
 alias ll='ls -la'
 alias ls='ls --color=auto'
@@ -10,3 +11,16 @@ alias sadd='svn add'
 alias sci='svn ci'
 alias sstatus='svn status'
 
+alias change_dns="s sed -i s/'^nameserver .*'/'nameserver 8.8.8.8'/g /etc/resolv.conf"
+
+#Work
+alias vpnk="s vpnc-disconnect"
+alias vpnc="s vpnc-connect"
+
+alias dpkg-search= "dpkg -l | grep "
+
+
+#Asterisk
+alias ast_restart= "/etc/initi.d/asterisk start"
+alias ast_channels= "asterisk -rnx "core show channels"
+alias ast_pri= "asterisk -rnx "pri show spams"
