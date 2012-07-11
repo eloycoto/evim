@@ -33,7 +33,7 @@ map <silent><F9> :set background=dark<CR>
 
 ""Number
 set number
-map <silent><F2> :set invnumber<CR>
+"map <silent><F2> :set invnumber<CR>
 
 ""Paste options
 
@@ -42,7 +42,7 @@ map <silent><F6> :set nopaste<CR>
 
 
 "Saving
-map <silent><F3> :wq!<CR>
+map <silent><F10> :wq!<CR>
 imap qq <Esc>:q!<CR>
 imap ww <Esc>:wq<CR>
 
@@ -56,4 +56,23 @@ match BadWhitespace /^\t\+/
 match BadWhitespace /^\s\+/
 match BadWhitespace /\t\+$/
 match BadWhitespace /\s\+$/
+filetype plugin on
 
+" F3 = OmniComplete
+imap <f3> <c-x><c-o>
+
+
+
+" Configuración del autocompletado inteligente (el de Python necesita un Vim
+" compilado contra las librerías de Python para funcionar)
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+
+
+"Ctags Configuration
+
+let Tlist_Ctags_Cmd = "/usr/bin/ctags"
+let Tlist_WinWidth = 50
+map <F7> :TlistToggle<cr>
