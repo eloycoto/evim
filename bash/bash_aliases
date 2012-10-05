@@ -1,28 +1,61 @@
 alias s='sudo'
 
+#Color
 alias ll='ls -la'
 alias ls='ls --color=auto'
+
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
+#Subversion
 alias sup='svn up'
 alias sadd='svn add'
 alias sci='svn ci'
 alias sstatus='svn status'
 
-alias change_dns="s sed -i s/'^nameserver .*'/'nameserver 8.8.8.8'/g /etc/resolv.conf"
-
-alias top10="ps -eo pcpu,pid,user,args | sort -k 1 -r | head -10"
  
 #Work
 alias vpnk="s vpnc-disconnect"
 alias vpnc="s vpnc-connect"
+alias change_dns="s sed -i s/'^nameserver .*'/'nameserver 8.8.8.8'/g /etc/resolv.conf"
 
-alias dpkg-search= "dpkg -l | grep "
+#linux
+function dpkg-search(){
+	dpkg -l | grep $1
+}
+
+alias top10="ps -eo pcpu,pid,user,args | sort -k 1 -r | head -10"
+
+
+
+#API
+function jsonCurl(){
+	if [ -z $1 ];then
+		curl $1 | pjson
+	else
+		echo "No url present"
+	fi
+}
 
 
 #Asterisk
-alias ast_restart= "/etc/init.d/asterisk start"
-alias ast_channels= "asterisk -rnx \"core show channels\""
-alias ast_pri= "asterisk -rnx \"pri show spams\""
+function ast_start(){
+	/etc/init.d/asterisk start	
+}
+
+function ast_restart(){
+	/etc/init.d/asterisk start	
+}
+
+function ast_channels(){
+	asterisk -rnx "core show channels"
+}
+
+function ast_pri(){
+	asterisk -rnx "pri show spams"	
+}
+
+function ast_pri_channels(){
+	asterisk -nrx "pri show channels" |grep "^\ " | awk '{if ($7 != "") print "Port "$1}' | uniq -c
+}
