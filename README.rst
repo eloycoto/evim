@@ -31,6 +31,7 @@ Evim is my personal vim's configuration. It is a basic conf for sysadmin.
 
 
 ### General Linux
+
 - ls/grep/egrep to show with colors
 - sup ->  svn up
 - sadd -> svn add
@@ -42,10 +43,12 @@ Evim is my personal vim's configuration. It is a basic conf for sysadmin.
 - change-dns -> To use google dns 
 
 #### Vpnc
+
 - vpnc $file connect with this configuration
 - vpnk kill vpnc
 
 ### Asterisk
+
 - ast_start -> Start Asterisk
 - ast_restart -> Restart Asterisk
 - ast_channels -> Asterisk channels
