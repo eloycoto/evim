@@ -54,3 +54,6 @@ Evim is my personal vim's configuration. It is a basic conf for sysadmin.
 - ast_channels -> Asterisk channels
 - ast_pri -> Asterisk pri status
 - ast_pri_channels -> Asterisk number pri channles
+
+### Other
+- convertxcf -> Convert xcf files in JPG (Wedding plans :-))

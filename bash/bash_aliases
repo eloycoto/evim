@@ -59,3 +59,13 @@ function ast_pri(){
 function ast_pri_channels(){
 	asterisk -nrx "pri show channels" |grep "^\ " | awk '{if ($7 != "") print "Port "$1}' | uniq -c
 }
+
+#other
+function convertxcf(){
+    ls -1 | grep xcf | while read line;
+    do
+        mkdir -p jpeg
+        PHOTO=$(echo $line | awk -F '.xcf' '{print $1}')
+        convert $PHOTO.xcf jpeg/$PHOTO.jpg
+    done
+}
