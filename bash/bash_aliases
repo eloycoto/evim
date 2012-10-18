@@ -20,6 +20,10 @@ alias vpnk="s vpnc-disconnect"
 alias vpnc="s vpnc-connect"
 alias change_dns="s sed -i s/'^nameserver .*'/'nameserver 8.8.8.8'/g /etc/resolv.conf"
 
+function iroute(){
+    s ip route add $1 via $2
+}
+
 #linux
 function dpkg-search(){
 	dpkg -l | grep $1

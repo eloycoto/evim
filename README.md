@@ -41,6 +41,7 @@ Evim is my personal vim's configuration. It is a basic conf for sysadmin.
 - top10 -> Top 10 process by resouce use
 - dpkg-search -> To see installed packeges 
 - change-dns -> To use google dns 
+- iroute -> Create a new route $1 -> Netork $2 -> gateway
 
 #### Vpnc
 
