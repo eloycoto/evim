@@ -58,3 +58,4 @@ Evim is my personal vim's configuration. It is a basic conf for sysadmin.
 
 ### Other
 - convertxcf -> Convert xcf files in JPG (Wedding plans :-))
+- usbHeadsetConfig -> Set usb headset as default alsa device
