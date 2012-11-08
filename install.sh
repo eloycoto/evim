@@ -37,3 +37,10 @@ cp $DIR/bash/bash_aliases $HOME/.bash_aliases
 #reload bash
 bash
 
+
+if [ -f ~/.asoundrc ]
+then
+    mv ~/.asoundrc ~/.asoundrc-$DATE
+fi
+cp $DIR/bash/asoundrc $HOME/.asoundrc
+

@@ -45,7 +45,23 @@ function dpkg-search(){
 
 alias top10="ps -eo pcpu,pid,user,args | sort -k 1 -r | head -10"
 
+#logs 
 
+
+function urldecode(){
+    while read data
+    do
+        echo $data | python -c "import sys, urllib as ul;print ul.unquote_plus(sys.stdin.readline())"
+    done
+}
+
+
+function urlencode(){
+    while read data
+    do
+        echo $data | python -c "import sys, urllib as ul;print ul.quote_plus(sys.stdin.readline())"
+    done
+}
 
 #API
 function jsonCurl(){
@@ -87,3 +103,14 @@ function convertxcf(){
         convert $PHOTO.xcf jpeg/$PHOTO.jpg
     done
 }
+
+function usbHeadsetConfig(){
+    USB=`cat /proc/asound/cards  | grep "Headset" | grep -oP '^\W\d' | tr -d " "`
+    ASOUND=$HOME/.asoundrc
+    if [ $USB -ge 0 ] &&  [ -f $ASOUND ];then
+        sed -i "s/hw:[0-9]/hw:"$USB"/g" $ASOUND
+        sed -i "s/card [0-9]/card "$USB"/g" $ASOUND
+        s /etc/init.d/alsa-utils restart
+    fi
+}
+
