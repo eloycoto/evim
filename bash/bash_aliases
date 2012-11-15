@@ -29,6 +29,12 @@ git config --global color.diff auto
 git config --global color.interactive auto
 git config --global color.status auto
 
+function gitSetUser(){
+    git config --global user.name "eloycoto"
+    git config --global user.email "eloy.coto@gmail.com"
+}
+
+
 #Work
 alias vpnk="s vpnc-disconnect"
 alias vpnc="s vpnc-connect"
