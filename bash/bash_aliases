@@ -71,7 +71,7 @@ function urlencode(){
 
 #API
 function jsonCurl(){
-	if [ -z $1 ];then
+	if [ $1 ];then
 		curl $1 | pjson
 	else
 		echo "No url present"
