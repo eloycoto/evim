@@ -33,7 +33,7 @@ map <silent><F9> :set background=dark<CR>
 
 ""Number
 set number
-"map <silent><F2> :set invnumber<CR>
+map <silent><F2> :set invnumber<CR>
 
 ""Paste options
 
