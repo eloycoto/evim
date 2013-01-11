@@ -3,7 +3,7 @@
 DIR=$(pwd)
 
 #Vim Conf
-cp $DIR/vim $HOME/.vim -R
+cp -R $DIR/vim $HOME/.vim
 rm  $HOME/.vimrc
 ln -s  $HOME/.vim/vimrc $HOME/.vimrc
 
