@@ -21,11 +21,11 @@ ln -s  $HOME/.vim/vimrc $HOME/.vimrc
 
 
 #BashConf
-if [ -f ~/.bashrc ]
+if [ -f ~/.bash_profile ]
 then
-    mv ~/.bashrc ~/.bashrc-$DATE
+    mv ~/.bash_profile ~/.bashrc-$DATE
 fi
-cp $DIR/bash/bashrc $HOME/.bashrc
+cp $DIR/bash/bashrc $HOME/.bash_profile
 
 
 if [ -f ~/.bash_aliases ]
