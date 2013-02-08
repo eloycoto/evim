@@ -123,6 +123,11 @@ function ast_pri_channels(){
 	asterisk -nrx "pri show channels" |grep "^\ " | awk '{if ($7 != "") print "Port "$1}' | uniq -c
 }
 
+
+#SIP 
+
+alias sip-grep = "ngrep -d any -P ' -W byline -T -i port 5060"
+
 #other
 function convertxcf(){
     ls -1 | grep xcf | while read line;
