@@ -57,6 +57,11 @@ Evim is my personal vim's configuration. It is a basic conf for sysadmin.
 - ast_pri -> Asterisk pri status
 - ast_pri_channels -> Asterisk number pri channles
 
+### SIP Trace
+- sip-grep -> read all sip traffic in the machine
+- sip-bgrep -> Only transactions with methods INVITE ACK CANCEL BYE REFER PRACK INFO MESSAGE
+
+
 ### Other
 - convertxcf -> Convert xcf files in JPG (Wedding plans :-))
 - usbHeadsetConfig -> Set usb headset as default alsa device
