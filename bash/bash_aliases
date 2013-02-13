@@ -37,6 +37,8 @@ extract () {
      fi
 }
 
+#Python PATH for MAC
+export PYTHONPATH='/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/'
 
 #Git
 __git_ps1 ()
@@ -127,7 +129,7 @@ function ast_pri_channels(){
 #SIP 
 
 alias sip-grep="ngrep -d any -P \"'\" -W byline -T -i port 5060"
-alias sip-bgrep="grep -d any -P \"'\" -W byline -T -i port 5060 -t \"(^|CSeq:\s?\d* )(INVITE|ACK|CANCEL|BYE|MESSAGE|REFER|PRACK|INFO|UPDATE)\""
+alias sip-bgrep="ngrep -d any -P \"'\" -W byline -T -i -t \"(^|CSeq:\s?\d* )(INVITE|ACK|CANCEL|BYE|MESSAGE|REFER|PRACK|INFO|UPDATE)\" port 5060"
 
 #other
 function convertxcf(){
