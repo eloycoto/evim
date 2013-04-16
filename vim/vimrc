@@ -24,8 +24,8 @@ set autoindent
 set copyindent
 
 "Tabs
-map <silent><A-Right> :tabnext<CR>
-map <silent><A-Left> :tabprevious<CR>
+map <silent><C-m> :tabnext<CR>
+map <silent><C-n> :tabprevious<CR>
 map <silent><C-t> :tabnew<CR>
 
 ""Colors
@@ -61,6 +61,8 @@ filetype plugin on
 " F3 = OmniComplete
 imap <f3> <c-x><c-o>
 
+"NERDTree
+map <silent><C-r> :NERDTreeToggle <CR>
 
 
 " Configuración del autocompletado inteligente (el de Python necesita un Vim

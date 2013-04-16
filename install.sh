@@ -31,7 +31,7 @@ cp $DIR/bash/bashrc $HOME/$BASHRC
 #BashConf
 if [ -f ~/$BASHRC ]
 then
-    mv ~/.$BASHRC ~/.bashrc-$DATE
+    mv ~/$BASHRC ~/.bashrc-$DATE
 fi
 
 if [ -f ~/.bash_aliases ]

@@ -9,8 +9,8 @@ Evim is my personal vim's configuration. It is a basic conf for sysadmin.
 ### Tabs:
 
 - Ctrl+t -> Create new tab
-- Alt+left -> Move left tab
-- Alt+Right -> Move right tab
+- Ctrl+n -> Move left tab
+- Ctrl+m-> Move right tab
 
 ### Short keys:
 
@@ -64,4 +64,4 @@ Evim is my personal vim's configuration. It is a basic conf for sysadmin.
 
 ### Other
 - convertxcf -> Convert xcf files in JPG (Wedding plans :-))
-- usbHeadsetConfig -> Set usb headset as default alsa device
+
