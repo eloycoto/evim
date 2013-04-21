@@ -1,9 +1,19 @@
 alias s='sudo'
 
-#Color
-alias ll='ls -la'
-alias ls='ls -G'
+if [ $(uname) ==  "Darwin" ]
+then
+    #Darwing support for commands
+    alias ll='ls -la'
+    alias ls='ls -G'
+    #PYTHONPATH for mac
+    export PYTHONPATH='/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/'
+else
 
+    #other linux support
+    echo "linux"
+fi
+
+#Color
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
@@ -37,8 +47,6 @@ extract () {
      fi
 }
 
-#Python PATH for MAC
-export PYTHONPATH='/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/'
 
 #Git
 __git_ps1 ()

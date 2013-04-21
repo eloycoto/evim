@@ -26,13 +26,12 @@ if [ $(uname) ==  "Darwin" ]
 then
     BASHRC=".bash_profile"
 fi
-cp $DIR/bash/bashrc $HOME/$BASHRC
 
-#BashConf
 if [ -f ~/$BASHRC ]
 then
-    mv ~/$BASHRC ~/.bashrc-$DATE
+    mv ~/$BASHRC ~/$BASHRC-$DATE
 fi
+cp -fv $DIR/bash/bashrc $HOME/$BASHRC
 
 if [ -f ~/.bash_aliases ]
 then
