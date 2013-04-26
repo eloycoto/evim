@@ -10,6 +10,9 @@ set history=1000
 set undolevels=100
 set ruler
 
+let mapleader=','
+
+
 "Search and replace
 set incsearch
 
@@ -23,7 +26,12 @@ set expandtab
 set autoindent
 set copyindent
 
+"Shourcouts
+noremap % v%
+
 "Tabs
+
+set guitablabel=%M%t
 map <silent><C-m> :tabnext<CR>
 map <silent><C-n> :tabprevious<CR>
 map <silent><C-t> :tabnew<CR>
@@ -78,3 +86,9 @@ autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 let Tlist_Ctags_Cmd = "/usr/bin/ctags"
 let Tlist_WinWidth = 50
 map <F7> :TlistToggle<cr>
+
+
+nmap <Leader>= :Tabularize /=<CR>
+vmap <Leader>= :Tabularize /=<CR>
+nmap <Leader>: :Tabularize /:\zs<CR>
+vmap <Leader>: :Tabularize /:\zs<CR>

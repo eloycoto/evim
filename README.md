@@ -20,12 +20,19 @@ Evim is my personal vim's configuration. It is a basic conf for sysadmin.
 - F5 -> Set paste mode
 - F6 -> Clean paste mode
 - F7 -> Ctag list
+- F8 -> Toogle background color
 - F9 -> Change background color to dark
 - F10 -> Save and quit
 
 - qq -> Close whitout saving
 - ww -> Save and quit
 
+
+### Short keys
+
+- Ctrl+r: NERDTreeToggle
+- ,= -> Lint variables with =
+- ,: -> Ling variables with :
 
 ## Bash aliases
 

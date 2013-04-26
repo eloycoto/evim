@@ -15,7 +15,7 @@ then
     mv ~/.vimrc ~/.vimrc-$DATE
 fi
 
-cp -R $DIR/vim $HOME/.vim
+cp -Rv $DIR/vim/ $HOME/.vim/
 rm  $HOME/.vimrc
 ln -s  $HOME/.vim/vimrc $HOME/.vimrc
 
